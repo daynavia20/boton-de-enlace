@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Boton formulario </title>
+    <style>
+        body{ 
+            background-color: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="ContentFormulario">
+        <center><button style="width:100px; height:100px;margin:10px 0px;padding: 20px;background:#e57979;color:#fff;border:solid 1px #000;" onclick="GeneraForm()"> Mirar Formulario</button></center>
+    </section> 
+    <script type="text/javascript">
+        function GeneraForm(){
+
+            let formulario=document.createElement("form");
+     
+            let titulo=document.createElement("label");
+     
+            let cajaTextNombres=document.createElement("input");
+     
+            let cajaTextApellidos=document.createElement("input");
+     
+            let cajaTextEmail=document.createElement("input");
+     
+            let cajaTextAsunto=document.createElement("input");
+
+            let boton=document.createElement("input");
+     
+                formulario.setAttribute('method', "post");
+                formulario.setAttribute('action', "");
+                formulario.setAttribute('style', "width:300px;margin: 0px auto");
+     
+                cajaTextNombres.setAttribute('type', "text");
+                cajaTextNombres.setAttribute('placeholder', "Nombres");
+                cajaTextNombres.setAttribute('style', "width:100%;margin:10px 0px;padding: 5px");
+     
+                cajaTextApellidos.setAttribute('type', "text");
+                cajaTextApellidos.setAttribute('placeholder', "Apellidos");
+                cajaTextApellidos.setAttribute('style', "width:100%;margin:10px 0px;padding: 5px");
+     
+                cajaTextEmail.setAttribute('type', "text");
+                cajaTextEmail.setAttribute('placeholder', "Email");
+                cajaTextEmail.setAttribute('style', "width:100%;margin:10px 0px;padding: 5px");
+     
+                cajaTextAsunto.setAttribute('type', "text");
+                cajaTextAsunto.setAttribute('placeholder', "Asunto");
+                cajaTextAsunto.setAttribute('style', "width:100%;margin:10px 0px;padding: 5px");
+    
+                boton.setAttribute('type', "button");	
+                boton.setAttribute('value', "Enviar");
+                boton.setAttribute('style', "width:100px;margin: 10px 0px;padding: 10px;background:#2E4053;color:#fff;border:solid 1px #000;" );
+                boton.setAttribute('onclick', "alert(' formulario enviado ')");
+     
+                titulo.innerHTML='<h1> Llenar formulario </h1>';
+                formulario.appendChild(titulo);
+                formulario.appendChild(cajaTextNombres);
+                formulario.appendChild(cajaTextApellidos);
+                formulario.appendChild(cajaTextEmail);
+                formulario.appendChild(cajaTextAsunto);
+                formulario.appendChild(boton);
+                document.getElementById('ContentFormulario').appendChild(formulario);			
+        }
+    </script>     
+</body>
+</html>
